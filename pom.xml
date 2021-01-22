@@ -12,12 +12,16 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- General -->
 		<javafaker.version>1.0.2</javafaker.version>
 
 		<!-- JXLS -->
 		<jxls.version>2.9.0</jxls.version>
+		
+		<!-- Maven -->
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
 	</properties>
 
@@ -45,4 +49,18 @@
 
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
 </project>
